@@ -6,7 +6,11 @@ const styles = {
 }
 
 const MoreButton = () => {
-  return <div>MoreButton</div>
+  return (
+    <div className={styles.button}>
+      More <RightArrow />
+    </div>
+  )
 }
 
 export default MoreButton

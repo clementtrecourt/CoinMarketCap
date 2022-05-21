@@ -37,7 +37,7 @@ const trendingData = [
     name: 'Bitcoin',
     icon: btc,
     isIncrement: true,
-    rate: '2.02$',
+    rate: '9.32$',
   },
 ]
 
@@ -46,30 +46,36 @@ const Trending = () => {
   return (
     <div className="text-white">
       <div className={styles.trendingWrapper}>
-        <h1 className={styles.h1}>Today's Cryptocurency Prices by Marketcap</h1>
+        <div className="flex justify-between">
+          <h1 className={styles.h1}>
+            Todays Cryptocurrency Prices by Market Cap
+          </h1>
 
-        <div className="flex">
-          <p className="text-gray-400">Highlights &nbsp;</p>
-          <ReactSwitch
-            checked={checked}
-            onChange={() => {
-              setChecked(!checked)
-            }}
-          />
-        </div>
-        <div className="flex">
-          <p className="text-gray-400">
-            The global crypto market cap is $1.43T
-          </p>
-          <span className="flex">
-            <Rate isIncrement={true} rate="0.53%" />
-            <p>
-              decrease over the last day
-              <span className="underline">Read more</span>
-            </p>
-          </span>
+          <div className="flex">
+            <p className="text-gray-400 ">Highlights &nbsp;</p>
+            <ReactSwitch
+              checked={checked}
+              onChange={() => {
+                setChecked(!checked)
+              }}
+            />
+          </div>
         </div>
         <br />
+        <div className="flex">
+          <p>The global crypto market cap is $1.74T, a &nbsp; </p>
+          <span>
+            {' '}
+            <Rate isIncrement={true} rate="0.53%" />{' '}
+          </span>
+          <p>
+            {' '}
+            &nbsp; decrease over the last day.{' '}
+            <span className="underline">Read More</span>{' '}
+          </p>
+        </div>
+        <br />
+
         <div className={styles.flexCenter}>
           <TrendingCard
             title="Trending"

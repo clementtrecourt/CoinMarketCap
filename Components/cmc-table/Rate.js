@@ -1,4 +1,3 @@
-import React from 'react'
 import ChevronDown from '../../assets/svg/chevronDown'
 import ChevronUp from '../../assets/svg/chevronUp'
 
@@ -16,7 +15,7 @@ const Rate = ({ isIncrement, rate }) => {
       ) : (
         <ChevronDown fill="#EA3943" />
       )}
-      <div className={isIncrement ? styles.green : styles.red}>{rate}</div>
+      <p className={isIncrement ? styles.green : styles.red}>{rate}</p>
     </div>
   )
 }
